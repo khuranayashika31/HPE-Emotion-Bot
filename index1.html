@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caption Bot</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+
+
+body{
+	
+	background-image: url("./static/line.jpg"); 
+	background-color: rgba(240, 16, 16, 0.2);
+	
+}
+div.container{
+	background: rgba(240, 16, 16, 0.2)
+	
+}
+div.row{
+	align-content: center;
+}
+.heading{
+	
+	font-weight: 200;
+	font-size: 5em;
+	text-shadow: 5px 5px 5px rgb(36, 248, 248);
+	color:snow;
+	font-style:bold;
+	font-family:Impact;
+	text-align: center;
+}
+
+
+
+div.col-sm-8{
+	text-align: right;
+	font-family:Courier;
+	font-style: bold;
+	font-size: 2em;
+	color:snow;
+	background: rgba(233, 174, 11, 0.1);
+	
+}
+form.form-inline{
+	margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+	color:snow;
+}
+
+
+label{
+	font-family: Impact;
+	font-size: 1.5em;
+}
+p.text{
+	text-shadow: 5px 5px 5px rgb(6, 212, 202);
+}
+p.lab{
+	font-family: Times;
+	font-size: 3 em;
+	text-align: center;
+	color: snow;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+	
+
+
+		
+		<div class="head-area">
+			<div class="container">
+				<h1 class="heading">EMOTION BOT</h1>
+				<p class="lab">Developed by Yashika Khurana & Rohit Nikam</p>
+			</div>
+		</div>
+
+<br>
+
+
+
+<form class="form-inline" method="POST" action="/" enctype="multipart/form-data"> 
+	<label><b>Enter Image : &nbsp;&nbsp; </b></label>
+	<input class="form-control" type="file" name="userfile" placeholder="Your image">
+	<button type="submit" class="btn btn-primary" style="background-color: rgb(235, 25, 25);border:3px solid #020300; font-family: Times;">SUBMIT</button>
+</form>
+		
+		
+
+		{% if your_result %}
+
+			<div class="row">
+				<div class="col-sm-4">
+				<img src="{{your_result['image']}}">
+				</div>
+				<br>
+				
+				<p>
+				<div class="col-sm-8">
+					<p class="text"> PREDICTION GENERATED: </p>
+			 		<p> <b>{{ your_result['prediction'] }} </b> </p>
+				</div>
+				</p>
+				
+			</div>
+
+	
+		{% endif %}
+
+	
+		</div>
+	
+	 
+
+
+
+</body>
+</html>
