@@ -1,5 +1,6 @@
 
 from flask import Flask, render_template, redirect, request
+import streamlit as st
 import expresso
 app=Flask(__name__)
 
@@ -11,7 +12,8 @@ def hello():
 def predict():
     if request.method =='POST':
         f=request.files['userfile']
-        path="./assets/images/{}".format(f.filename)
+        #path="./assets/images/{}".format(f.filename)
+        path=st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
         f.save(path)
         pred= expresso.predict_emotion(path)
 
