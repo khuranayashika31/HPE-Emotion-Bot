@@ -11,7 +11,7 @@ def hello():
 def predict():
     if request.method =='POST':
         f=request.files['userfile']
-        path="./static/{}".format(f.filename)
+        path="./assets/images/{}".format(f.filename)
         f.save(path)
         pred= expresso.predict_emotion(path)
 
