@@ -1,24 +1,15 @@
 import PIL
 from PIL import Image
 import matplotlib.pyplot as plt
+import keras
 from keras.models import load_model
 from PIL import ImageOps
-import tensorflow as tf
 
-from tensorflow import keras
+
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense , Activation , Dropout ,Flatten
-from keras.layers.convolutional import Conv2D
-from keras.layers.convolutional import MaxPooling2D
-from keras.metrics import categorical_accuracy
-from keras.models import model_from_json
-from keras.callbacks import ModelCheckpoint
-from keras.optimizers import *
-from keras.layers.normalization import BatchNormalization
-import pandas as pd
-import os
-import numpy as np
+
+
+
 import cv2
 
 
