@@ -1,13 +1,13 @@
 
 from flask import Flask, render_template, redirect, request
 import expresso
-ap=Flask(__name__)
+app=Flask(__name__)
 
-@ap.route('/')
+@app.route('/')
 def hello():
     return render_template("index1.html")
 
-@ap.route('/', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     if request.method =='POST':
         f=request.files['userfile']
@@ -25,7 +25,7 @@ def predict():
         return render_template("index1.html", your_result=result_dic)
 
 if __name__ =='__main__':
-    ap.run(debug = True)
+    app.run(debug = True)
 
 
 
