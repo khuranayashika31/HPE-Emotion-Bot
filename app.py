@@ -6,7 +6,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def hello():
-    return render_template("index1.html")
+    return render_template("indexx.html")
 
 @app.route('/', methods=['POST'])
 def predict():
@@ -24,7 +24,7 @@ def predict():
 
     
 
-        return render_template("index1.html", your_result=result_dic)
+        return render_template("indexx.html", your_result=result_dic)
 
 if __name__ =='__main__':
     app.run(debug = True)
