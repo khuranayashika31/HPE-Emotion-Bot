@@ -58,7 +58,7 @@ def predict_emotion(path):
 
         #return o
     else:
-        return 0
+        return "No face detected. Try again with a different image."
 
 
 
