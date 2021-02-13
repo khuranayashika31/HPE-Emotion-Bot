@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'eb05'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1e33ff93eba444c08546766c82e9bc76 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2d0df1d67fef4bc385cbc6aef627aa33 }}
